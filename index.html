@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans maršruts līdz LU</title>
+    <style>
+        /* Inline CSS */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #E5E7EB;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 32px;
+        }
+
+        .nav-link {
+            margin-right: 16px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #4B5563;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #F3F4F6;
+        }
+
+        .hero-content {
+            background-color: #FFFFFF;
+            padding: 64px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 640px;
+        }
+
+        .hero-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin-bottom: 24px;
+        }
+
+        .hero-description {
+            color: #4B5563;
+            margin-bottom: 24px;
+        }
+
+        .start-button {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .start-button:hover {
+            background-color: #1F2937;
+        }
+
+        .section {
+            padding: 32px;
+        }
+
+        .section .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-img img {
+            width: 100%;
+        }
+
+        .section-content {
+            padding-left: 0;
+            margin-top: 16px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .section-description {
+            margin-top: 16px;
+        }
+
+        .section-buttons {
+            margin-top: 16px;
+        }
+
+        .prev-button, .next-button {
+            background-color: #000000;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            margin-right: 8px;
+        }
+
+        .prev-button:hover, .next-button:hover {
+            background-color: #4B5563;
+        }
+
+        .footer {
+            background-color: #E5E7EB;
+            padding: 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .footer-column {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-link {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #4B5563;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/assets/images/aa_logo.png" alt="aa-tdp mājaslapas logo">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="#hero-block" class="nav-link">Mājas</a>
+            <a href="#section-1" class="nav-link">Sekcija 1</a>
+            <a href="#section-2" class="nav-link">Sekcija 2</a>
+            <a href="#section-3" class="nav-link">Sekcija 3</a>
+            <a href="#section-4" class="nav-link">Sekcija 4</a>
+        </nav>
+    </header>
+    <main id="hero-block" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Mans maršruts līdz LU</h1>
+            <p class="hero-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet elit tortor, eu varius tortor ornare eu. Proin placerat fringilla nibh. Nulla luctus dictum libero in vestibulum.</p>
+            <a href="#section-1" class="start-button">Sākt</a>
+        </div>
+    </main>
+    <section id="section-1" class="section bg-gray-300">
+        <div class="container">
+            <div class="section-img">
+                <img src="https://upload.wikimedia.org/wikipedia/lv/4/44/Latvijas_Universit%C4%81te.JPG" alt="Image 1">
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">Sekcijas 1 nosaukums</h2>
+                <p class="section-description">Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
+                <a href="#section-2" class="next-button">Nākamais</a>
+            </div>
+        </div>
+    </section>
+    <section id="section-2" class="section bg-gray-100">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Sekcijas 2 nosaukums</h2>
+                <p class="section-description">Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
+                <div class="section-buttons">
+                    <a href="#section-1" class="prev-button">Iepriekšējais</a>
+                    <a href="#section-3" class="next-button">Nākamais</a>
+                </div>
+            </div>
+            <div class="section-img">
+                <img src="https://upload.wikimedia.org/wikipedia/lv/4/44/Latvijas_Universit%C4%81te.JPG" alt="Image 2">
+            </div>
+        </div>
+    </section>
+    <section id="section-3" class="section bg-gray-300">
+        <div class="container">
+            <div class="section-img">
+                <img src="https://upload.wikimedia.org/wikipedia/lv/4/44/Latvijas_Universit%C4%81te.JPG" alt="Image 3">
+            </div>
+            <div class="section-content">
+                <h2 class="section-title">Sekcijas 3 nosaukums</h2>
+                <p class="section-description">Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
+                <div class="section-buttons">
+                    <a href="#section-2" class="prev-button">Iepriekšējais</a>
+                    <a href="#section-4" class="next-button">Nākamais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section-4" class="section bg-gray-100">
+        <div class="container">
+            <div class="section-content">
+                <h2 class="section-title">Sekcijas 4 nosaukums</h2>
+                <p class="section-description">Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
+                <a href="#section-3" class="prev-button">Iepriekšējais</a>
+            </div>
+            <div class="section-img">
+                <img src="https://upload.wikimedia.org/wikipedia/lv/4/44/Latvijas_Universit%C4%81te.JPG" alt="Image 4">
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h5 class="footer-title">Kontaktinformācija</h5>
+                <ul class="footer-list">
+                    <li><a href="https://github.com/your-profile" class="footer-link">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/your-profile" class="footer-link">LinkedIn</a></li>
+                    <li><a href="mailto:your.email@example.com" class="footer-link">Email</a></li>
+                    <li><a href="tel:+1234567890" class="footer-link">Tālrunis</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5 class="footer-title">Autors</h5>
+                <ul class="footer-list">
+                    <li>Autors: Jūsu Vārds</li>
+                    <li>St. apl. nr.: Jūsu Studenta Numurs</li>
+                    <li>E-pasts: jūsu.epasts@example.com</li>
+                    <li>Tālrunis: +371 Jūsu Numurs</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            Visas tiesības aizsargātas © 2024 Jūsu Vārds
+        </div>
+    </footer>
+</body>
+</html>

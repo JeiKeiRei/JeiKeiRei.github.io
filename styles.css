@@ -1,8 +1,42 @@
+html {
+	/* margin-right: 15px; */
+}
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: "Lexend", sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center; /* Center content by default */
+    text-align: center; 
+}
+
+h1 {
+	font-size: 64px;
+	font-weight: 600;
+}
+
+h2 {
+	font-size: 52px;
+	font-weight: 600;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 24px;
+	font-weight: 600;
+}
+
+button {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+p {
+	font-size: 16px;
+	font-weight: normal;
 }
 
 nav {
@@ -10,7 +44,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: #f0f0f0;
-    padding: 10px 20px;
+    padding: 10px 30px;
     position: relative; /* For positioning the side panel */
 }
 
@@ -78,27 +112,34 @@ nav ul li a {
     cursor: pointer;
 }
 
-.hero {
-    background: url('background.jpg') no-repeat center center;
-    background-size: cover;
-    padding: 60px 20px;
-}
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
 }
 
 .content-section {
+    background-color: #e3e3e3;
     padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .content-section img {
     width: 100%;
     max-width: 400px;
     height: auto;
+}
+
+.content-section.dark-background {
+    background-color: white;
+}
+
+.full-width-image {
+    width: 100%;
 }
 
 .full-width-image {
@@ -108,12 +149,30 @@ nav ul li a {
 .section-text {
     max-width: 600px;
     margin: 0 auto 20px auto; /* Center text and add bottom margin */
+	flex: 1;
+}
+.section-text p {
+	text-align: left;
+}
+.section-image {
+    flex: 1;
+    max-width: 400px;
+}
+.section4 .section-text {
+    order: 1;
+}
+
+.section4 .section-image {
+    order: 2;
 }
 
 .next, .prev {
     margin-top: 20px;
+	margin-right: 30px;
     padding: 10px 20px;
     border: none;
+	border-radius: 8px;
+	height: 40px;
     background-color: #333;
     color: white;
     cursor: pointer;
@@ -122,6 +181,11 @@ nav ul li a {
 
 .next:hover, .prev:hover {
     background-color: #555;
+	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24),0 7px 10px 0 rgba(0,0,0,0.19);
+}
+
+#start.next {
+	width: 100px;
 }
 
 .signature {
@@ -132,14 +196,14 @@ nav ul li a {
 
 footer {
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 20px 40px;
     text-align: left;
 }
 
 .footer-column {
     float: left;
     width: 30%;
-    margin-right: 5%;
+    margin-right: 1%;
 }
 
 .footer-column h3 {
@@ -180,7 +244,7 @@ body.dark-mode nav ul li a {
 }
 
 body.dark-mode .hero-content {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 body.dark-mode .content-section {
@@ -209,7 +273,58 @@ body.dark-mode .footer-bottom {
 
 /* Media Queries */
 
-@media (max-width: 1024px) {
+
+@media only screen and (max-width: 600px) {
+	h1 {
+		font-size: 40px;
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: 36px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 26px;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 22px;
+		font-weight: 600;
+	}
+
+	button {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	p {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	
+    .hero {
+        display: flex;
+		background: url('hero.jpg') no-repeat center center;
+        background-size: cover;
+        height: 95vh;
+        width: 100%;
+        align-items: center;
+    }
+	.hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 1.25rem;
+        margin: 1rem 1rem;
+        height: fit-content;
+        width: 100%;
+        background: rgba(255,255,255, 0.9);
+    }
+	
+	
     nav ul {
         display: none;
     }
@@ -217,7 +332,7 @@ body.dark-mode .footer-bottom {
         display: block;
     }
     .side-panel {
-        display: block;
+        display: none;
     }
     .content-section {
         text-align: center; /* Center content on smaller screens */
@@ -225,12 +340,112 @@ body.dark-mode .footer-bottom {
     .content-section img {
         margin-bottom: 20px; /* Add margin below images */
     }
+	footer {
+		margin-right: -20px;
+	}
     .footer-column {
         float: none;
         width: 100%;
         margin-bottom: 20px;
     }
     .hero {
-        padding: 60px 10px; /* Add padding on the sides */
+        padding: 60px 0px; /* Add padding on the sides */
+    }
+}
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+	h1 {
+		font-size: 50px;
+		font-weight: 600;
+	}
+
+	h2 {
+		font-size: 44px;
+		font-weight: 600;
+	}
+
+	h3 {
+		font-size: 30px;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 24px;
+		font-weight: 600;
+	}
+
+	button {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	p {
+		font-size: 16px;
+		font-weight: normal;
+	}
+	
+    .hero {
+        display: flex;
+        background: url('hero.jpg') no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        align-items: center;
+    }
+	.hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2rem 1.25rem;
+        margin: 3.125rem 10%;
+        height: fit-content;
+        width: 100%;
+        background: rgba(255,255,255, 0.9);
+    }
+	
+    nav ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .side-panel {
+        display: none;
+    }
+    .content-section {
+        text-align: center; /* Center content on smaller screens */
+    }
+    .content-section img {
+        margin-bottom: 20px; /* Add margin below images */
+    }
+	footer {
+		margin-right: -20px;
+	}
+    .footer-column {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero {
+        padding: 60px 0px; /* Add padding on the sides */
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .hero {
+        display: flex;
+		background: url('hero.jpg') no-repeat center center;
+        background-size: cover;
+        height: 95vh;
+        width: 100%;
+        align-items: center;
+    }
+	.hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 3.125rem;
+        margin: 3.125rem 10%;
+        height: fit-content;
+        width: 100%;
+        background: rgba(255,255,255, 0.9);
     }
 }

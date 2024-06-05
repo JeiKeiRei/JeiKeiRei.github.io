@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mans Maršruts līdz LU</title>
     <link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <img src="logo.png" alt="Logo" id="logo">
+        <img src="aa_logo_tr_2.png" alt="Logo" id="logo">
         <ul class="nav-links">
             <li><a href="#home">Mājas</a></li>
             <li><a href="#section1">Sekcija 1</a></li>
@@ -18,7 +21,7 @@
         </ul>
         <div class="mode-toggle">
             <button id="dark-mode">Tumšs</button>
-            <button id="light-mode">Gaišs</button>
+            <button id="light-mode" disabled>Gaišs</button>
         </div>
         <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
@@ -30,55 +33,79 @@
             <li><a href="#section3" onclick="toggleMenu()">Sekcija 3</a></li>
             <li><a href="#section4" onclick="toggleMenu()">Sekcija 4</a></li>
             <li><button id="dark-mode-side" onclick="setDarkMode()">Tumšs</button></li>
-            <li><button id="light-mode-side" onclick="setLightMode()">Gaišs</button></li>
+            <li><button id="light-mode-side" onclick="setLightMode()" disabled>Gaišs</button></li>
         </ul>
     </div>
 
-    <header id="home" class="hero">
+    <div id="home" class="hero">
         <div class="hero-content">
             <h1>Mans maršruts līdz LU</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet elit tortor, eu varius tortor ornare eu. Proin placerat fringilla nibh. Nulla luctus dictum libero in vestibulum.</p>
-            <button id="start">Sākt</button>
+            <button id="start" class="next">Sākt</button>
         </div>
-    </header>
+    </div>
 
     <section id="section1" class="content-section dark-background">
         <div class="section-text">
-            <h2>Sekcijas 1 nosaukums</h2>
+            <h2>Juglas ezers</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="next" onclick="scrollToSection('section2')">Nākamais</button>
         </div>
-        <img src="section1-image.png" alt="Sekcijas attēls" class="section-image">
-        <p class="signature">Signature text</p>
+		<div class="section-image">
+			<img src="juglas-ezers.jpg" alt="Juglas ezers rīta mostā" class="section-image">
+			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+		</div>
     </section>
 
     <section id="section2" class="content-section">
         <div class="section-text">
-            <h2>Sekcijas 2 nosaukums</h2>
+            <h2>Juglas centrs</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="prev" onclick="scrollToSection('section1')">Iepriekšējais</button>
             <button class="next" onclick="scrollToSection('section3')">Nākamais</button>
         </div>
-        <img src="section2-image.png" alt="Sekcijas attēls" class="section-image">
+		<div class="section-image">
+			<img src="juglas-centrs.jpg" alt="Sekcijas attēls" class="section-image">
+			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+		</div>
     </section>
 
     <section id="section3" class="content-section dark-background">
         <div class="section-text">
-            <h2>Sekcijas 3 nosaukums</h2>
+            <h2>Akropole alfa</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="prev" onclick="scrollToSection('section2')">Iepriekšējais</button>
             <button class="next" onclick="scrollToSection('section4')">Nākamais</button>
         </div>
-        <img src="section3-image.png" alt="Sekcijas attēls" class="section-image">
+		<div class="section-image">
+			<img src="akropole-alfa.jpg" alt="Sekcijas attēls" class="section-image">
+			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+		</div>
     </section>
-
+	
     <section id="section4" class="content-section">
         <div class="section-text">
-            <h2>Sekcijas 4 nosaukums</h2>
+            <h2>Brīvības piemineklis</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="prev" onclick="scrollToSection('section3')">Iepriekšējais</button>
+            <button class="next" onclick="scrollToSection('section5')">Nākamais</button>
         </div>
-        <img src="section4-image.png" alt="Sekcijas attēls" class="section-image full-width-image">
+		<div class="section-image">
+			<img src="brivibas-piemineklis.jpg" alt="Sekcijas attēls" class="section-image">
+			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+		</div>
+    </section>
+
+    <section id="section5" class="content-section dark-background">
+        <div class="section-text">
+            <h2>Latvijas Universitāte</h2>
+            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
+            <button class="prev" onclick="scrollToSection('section4')">Iepriekšējais</button>
+        </div>
+		<div class="section-image">
+			<img src="latvijas-universitate.jpg" alt="Sekcijas attēls" class="section-image full-width-image">
+			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+		</div>
     </section>
 
     <footer>
@@ -86,10 +113,11 @@
             <h3>Navigācija</h3>
             <ul>
                 <li><a href="#home">Sākums</a></li>
-                <li><a href="#section1">Sekcija 1</a></li>
-                <li><a href="#section2">Sekcija 2</a></li>
-                <li><a href="#section3">Sekcija 3</a></li>
-                <li><a href="#section4">Sekcija 4</a></li>
+                <li><a href="#section1">Juglas ezers</a></li>
+                <li><a href="#section2">Juglas centrs</a></li>
+                <li><a href="#section3">Akropole alfa</a></li>
+                <li><a href="#section4">Brīvības piemineklis</a></li>
+                <li><a href="#section5">Latvijas Universitāte</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -104,7 +132,7 @@
         <div class="footer-column">
             <h3>Kontakti</h3>
             <p>Autors: Artūrs Ābele<br>
-               St. apl. nr: aa012120<br>
+               St. apl. nr: aa21210<br>
                Epasts: arturs.abele@gmail.com<br>
                Tālrunis: +371 12345678</p>
         </div>

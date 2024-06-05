@@ -9,7 +9,7 @@
 <body>
     <nav>
         <img src="logo.png" alt="Logo" id="logo">
-        <ul>
+        <ul class="nav-links">
             <li><a href="#home">Mājas</a></li>
             <li><a href="#section1">Sekcija 1</a></li>
             <li><a href="#section2">Sekcija 2</a></li>
@@ -20,7 +20,19 @@
             <button id="dark-mode">Tumšs</button>
             <button id="light-mode">Gaišs</button>
         </div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
     </nav>
+    <div class="side-panel" id="sidePanel">
+        <ul>
+            <li><a href="#home" onclick="toggleMenu()">Mājas</a></li>
+            <li><a href="#section1" onclick="toggleMenu()">Sekcija 1</a></li>
+            <li><a href="#section2" onclick="toggleMenu()">Sekcija 2</a></li>
+            <li><a href="#section3" onclick="toggleMenu()">Sekcija 3</a></li>
+            <li><a href="#section4" onclick="toggleMenu()">Sekcija 4</a></li>
+            <li><button id="dark-mode-side" onclick="setDarkMode()">Tumšs</button></li>
+            <li><button id="light-mode-side" onclick="setLightMode()">Gaišs</button></li>
+        </ul>
+    </div>
 
     <header id="home" class="hero">
         <div class="hero-content">
@@ -31,33 +43,33 @@
     </header>
 
     <section id="section1" class="content-section dark-background">
-        <img src="section1-image.png" alt="Sekcijas attēls" class="section-image">
         <div class="section-text">
             <h2>Sekcijas 1 nosaukums</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="next" onclick="scrollToSection('section2')">Nākamais</button>
         </div>
+        <img src="section1-image.png" alt="Sekcijas attēls" class="section-image">
         <p class="signature">Signature text</p>
     </section>
 
     <section id="section2" class="content-section">
-        <img src="section2-image.png" alt="Sekcijas attēls" class="section-image">
         <div class="section-text">
             <h2>Sekcijas 2 nosaukums</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="prev" onclick="scrollToSection('section1')">Iepriekšējais</button>
             <button class="next" onclick="scrollToSection('section3')">Nākamais</button>
         </div>
+        <img src="section2-image.png" alt="Sekcijas attēls" class="section-image">
     </section>
 
     <section id="section3" class="content-section dark-background">
-        <img src="section3-image.png" alt="Sekcijas attēls" class="section-image">
         <div class="section-text">
             <h2>Sekcijas 3 nosaukums</h2>
             <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
             <button class="prev" onclick="scrollToSection('section2')">Iepriekšējais</button>
             <button class="next" onclick="scrollToSection('section4')">Nākamais</button>
         </div>
+        <img src="section3-image.png" alt="Sekcijas attēls" class="section-image">
     </section>
 
     <section id="section4" class="content-section">

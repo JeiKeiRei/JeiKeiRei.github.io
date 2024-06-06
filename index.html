@@ -11,7 +11,9 @@
 </head>
 <body>
     <nav>
+<!--        <a href="/">-->
         <img src="aa_logo_tr_2.png" alt="Logo" id="logo">
+<!--        </a>-->
         <ul class="nav-links">
             <li><a href="#home">Mājas</a></li>
             <li><a href="#section1">Sekcija 1</a></li>
@@ -23,7 +25,7 @@
             <button id="dark-mode">Tumšs</button>
             <button id="light-mode" disabled>Gaišs</button>
         </div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <img id="menu-icon" src="hamburger-ikona.png" class="hamburger" onclick="toggleMenu()" alt>
     </nav>
     <div class="side-panel" id="sidePanel">
         <ul>
@@ -32,24 +34,40 @@
             <li><a href="#section2" onclick="toggleMenu()">Sekcija 2</a></li>
             <li><a href="#section3" onclick="toggleMenu()">Sekcija 3</a></li>
             <li><a href="#section4" onclick="toggleMenu()">Sekcija 4</a></li>
-            <li><button id="dark-mode-side" onclick="setDarkMode()">Tumšs</button></li>
-            <li><button id="light-mode-side" onclick="setLightMode()" disabled>Gaišs</button></li>
+<!--            <li><button id="dark-mode-side" onclick="setDarkMode()">Tumšs</button></li>-->
+<!--            <li><button id="light-mode-side" onclick="setLightMode()" disabled>Gaišs</button></li>-->
         </ul>
     </div>
 
     <div id="home" class="hero">
         <div class="hero-content">
             <h1>Mans maršruts līdz LU</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquet elit tortor, eu varius tortor ornare eu. Proin placerat fringilla nibh. Nulla luctus dictum libero in vestibulum.</p>
+            <p>
+                Katru dienu, kad es dodu ceļā uz universitāti, es ne tikai tuvojos savai nākotnes karjerai, bet arī iegūstu jaunas perspektīvas un iespējas. Šis maršruts ir manas dienas sākums, tas ir manas ikdienas rituāls, kas man dod enerģiju un motivāciju. Nāc līdzi, parādīšu savu ceļu uz Latvijas Universitāti.
+            </p>
             <button id="start" class="next">Sākt</button>
         </div>
     </div>
 
-    <section id="section1" class="content-section dark-background">
+    <section id="section1" class="content-section dark-background section-type-1">
         <div class="section-text">
             <h2>Juglas ezers</h2>
-            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
-            <button class="next" onclick="scrollToSection('section2')">Nākamais</button>
+            <p>
+                Juglas ezers ir viens no maniem mīļākajiem apskates objektiem. Katru reizi, kad braucu garām, es apbrīnoju tā krāšnumu. Tā spēcīgie viļņi un vējš man atgādina par dabas spēku un neizsīkstošo enerģiju.
+            </p>
+            <p>
+                Siltā laikā, kad saule spīd un putni dzied, ezers rada patīkamu sajūtu. Tas ir kā miers un mierinājums, kas nāk no dabas klātbūtnes.
+            </p>
+            <p>
+                Katru reizi, kad es eju paskriet, es apstājos, lai pavērotu šo ezeru. Es vēroju, kā tas kustās, kā viļņi lēnām veidojas un pēc tam izzūd, kā ūdens atspulgu saulē. Es vēroju dzīvniekus, kas peld pa ezeru - zivis, kas lēkā ārā no ūdens, pīles, kas peld pa ūdens virsmu.
+            </p>
+            <p>
+                Bet es arī saprotu, ka ir jākopj šis ezers. Tas lēnām sāk aizaugt ciet, un tas ir mūsu atbildība to novērst. Apkārtējie cilvēki to saprot un cenšās risināt šo problēmu. Viņi rāda, cik daudziem cilvēkiem šis ezers ir svarīgs, un ka ir vērts parūpēties par šādu skaistu dabas dāvanu.
+            </p>
+            <p>
+                Juglas ezers ir vairāk nekā tikai ūdens tilpne. Tas ir stāsts par dabu, par mūsu saikni ar to, par mūsu atbildību pret to. Tas ir stāsts, ko es vēlos dalīties ar jums.
+            </p>
+            <button class="next" onclick="scrollToSection('section2')">Nākamā pietura</button>
         </div>
 		<div class="section-image">
 			<img src="juglas-ezers.jpg" alt="Juglas ezers rīta mostā" class="section-image">
@@ -57,60 +75,116 @@
 		</div>
     </section>
 
-    <section id="section2" class="content-section">
+    <section id="section2" class="content-section section-type-4">
         <div class="section-text">
             <h2>Juglas centrs</h2>
-            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
-            <button class="prev" onclick="scrollToSection('section1')">Iepriekšējais</button>
-            <button class="next" onclick="scrollToSection('section3')">Nākamais</button>
+            <p>
+                Juglas centrs ir vieta, kas ir pilna ar dzīvi un kustību. Katru dienu, kad es braucu garām, es apbrīnoju to, cik daudz cilvēku atrodas šajā apkaimē. Tas ir kā pilsēta pilsētā, kur katrs cilvēks ir sava stāsta varonis.
+
+            </p>
+            <p>
+                Es atceros, kā kopš bērnības esmu pavadījis daudz laika šeit, īpaši veikalos kā Rimi un restorānos kā McDonald’s. Šīs vietas ir kļuvušas par manu ikdienas rutīnu, un tās ir radījušas daudz patīkamu atmiņu.
+
+            </p>
+            <p>
+                Kad man ir jāgaida transporta līdzeklis, es gandrīz vienmēr izdomāju aizskriet uz kādu no šiem veikaliem, lai nopirktu kādu našķi. Man patīk sajūta, kad es varu iegādāties kaut ko garšīgu un baudīt to, kamēr gaidu savu autobusu vai tramvaju.
+
+            </p>
+            <p>
+                Bet visvairāk man patīk tas, kā šī vieta man atgādina par manu bērnību. Atceros, kā mēs ar vecākiem braucām mājās un gandrīz katru reizi izdomājām iebraukt šeit, lai iepirktos vai paēstu, parādot to, cik šī teritorija ir man sirdī.
+
+            </p>
         </div>
-		<div class="section-image">
-			<img src="juglas-centrs.jpg" alt="Sekcijas attēls" class="section-image">
-			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
-		</div>
+        <div class="section-image">
+            <img src="juglas-centrs.jpg" alt="Juglas centrs ikdienas darba procesā" class="section-image">
+            <p class="signature">Juglas centrs visu dienu pārpildīts</p>
+        </div>
+        <div class="section-nav">
+            <button class="prev" onclick="scrollToSection('section1')">Iepriekšējā pietura</button>
+            <button class="next" onclick="scrollToSection('section3')">Nākamā pietura</button>
+        </div>
     </section>
 
-    <section id="section3" class="content-section dark-background">
+    <section id="section3" class="content-section dark-background section-type-3">
         <div class="section-text">
             <h2>Akropole alfa</h2>
-            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
-            <button class="prev" onclick="scrollToSection('section2')">Iepriekšējais</button>
-            <button class="next" onclick="scrollToSection('section4')">Nākamais</button>
+            <p>
+                Akropole Alfa ir vieta, kas ir pilna ar dzīvi un kustību. Tā ir vieta, kur esmu ieguvis daudz atmiņu un kur esmu pavadījis daudz laika kopā ar savu ģimeni. Es atceros, kā mēs bieži gājām uz kino, un kā mēs vienmēr baudījām to patīkamo sajūtu, kad esam kopā.
+            </p>
+            <p>
+            Pēc treniņiem es vienmēr paspēju ātri ieskriet veikalā, lai nopirktu kaut ko garšīgu, vai paskatīties, kas jauns ir pārdošanā citos veikalos. Ziemas laikā man patika aiziet apskatīties eglītes, kas tiek pārdotas te pat blakus veikalam. Šī vieta ir īpaša, jo tā rada patīkamu vidi, it īpaši, kad esi tur kopā ar kādu.
+            </p>
+            <p>
+            Protams, jāuzmanās, lai nepaspēj pārāk daudz laika patērēt šeit, jo vienmēr ir iespējams kaut ko jaunu un interesantu ieraudzīt. Es atceros reizi, kad Alfā bija notikuši plūdi, bet vismaz viss tika savest kārtībā.
+            </p>
+            <p>
+            Pašlaik, ja man ir laiks, es gandrīz katru reizi izmantoju šo maršruta ceļu, lai, pirmkārt, apskatītos cikos būs man nepieciešamais transports, jo pie Alfas ir ekrāns, kas parāda precīzi pēc cik minūtēm būs man nepieciešamais transporta līdzeklis, un, ja man būs nedaudz jāpagaida, tad labprāt izdomāju aizskriet paskatīties, kas interesants notiek Alfā.
+            </p>
+            <p>
+            Akropole Alfa ir vieta, kur var justies kā mājās, neatkarīgi no tā, vai esat šeit pirmo reizi vai esat šeit bijis jau simtiem reižu. Tā ir vieta, kur var justies dzīvs un baudīt katru brīdi.
+            </p>
+            <button class="prev" onclick="scrollToSection('section2')">Iepriekšējā pietura</button>
+            <button class="next" onclick="scrollToSection('section4')">Nākamā pietura</button>
         </div>
 		<div class="section-image">
-			<img src="akropole-alfa.jpg" alt="Sekcijas attēls" class="section-image">
-			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+			<img src="akropole-alfa.jpg" alt="Akropole alfa pēcpusdienas nomodā" class="section-image">
+			<p class="signature">Akropolē alfa notiek nepārtraukta dzīvība</p>
 		</div>
     </section>
 	
-    <section id="section4" class="content-section">
+    <section id="section4" class="content-section section-type-2">
         <div class="section-text">
             <h2>Brīvības piemineklis</h2>
-            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
-            <button class="prev" onclick="scrollToSection('section3')">Iepriekšējais</button>
-            <button class="next" onclick="scrollToSection('section5')">Nākamais</button>
+            <p>
+                Brīvības piemineklis ir viens no maniem mīļākajiem apskates objektiem. Tas ir piemineklis, kas man vienmēr ir fascinējis ar savu skaistumu un grandiozitāti. Es vienmēr esmu apbrīnojis, kā šis piemineklis tika izdomāts, kā tas tika uzcelts, un kā par to rūpējas.
+            </p>
+            <p>
+            Es atceros, kā es vienmēr apbrīnoju, cik spoži un skaisti tas spīd katru reizi, kad eju tam garām. Šo pieminekli vienmēr apstaigā sargi, kuri ir skaisti un drosmīgi apģērbušies, un tas rada vēl lielāku cieņu pret šo pieminekli.
+            </p>
+            <p>
+            Blakus piemineklim atrodas ļoti skaista un sakopta daba, kur var apsēsties un to pavērot. Kamēr man ir bijis brīvā laikā, es ļoti bieži izdomāju aiziet un pasēdēt te pat blakus uz sola, lai pavērotu gan apkārtējo dabu, cilvēkus, gan pašu pieminekli.
+            </p>
+            <p>
+            Ir interesanti redzēt, ka arī tūristiem ir liela interese par to, kas šis ir par apskates objektu, un vienmēr to apbrīnot. Netālu no pieminekļa atrodas daudz restorānu, kur var aiziet paēst garšīgu ēdienu, kamēr uzturies šajā apkaimē.
+            </p>
+            <p>
+            Šis ir viens no pirmajiem pieminekļa apskates objektiem, kas man vienmēr nāk galvā, kad parādās interese paskatīties skaistus pieminekļus. Arī ļoti brīnišķīgi ir redzēt, kā par šo pieminekli rūpējas visa Latvija.
+            </p>
+            <button class="prev" onclick="scrollToSection('section3')">Iepriekšējā pietura</button>
+            <button class="next" onclick="scrollToSection('section5')">Nākamā pietura</button>
         </div>
 		<div class="section-image">
-			<img src="brivibas-piemineklis.jpg" alt="Sekcijas attēls" class="section-image">
-			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
+			<img src="brivibas-piemineklis.jpg" alt="Brīvības piemineklis ikdienas krāšnumā" class="section-image">
+			<p class="signature">Piemineklis vienmēr liek skatīties uz auģsu</p>
 		</div>
     </section>
 
-    <section id="section5" class="content-section dark-background">
+    <section id="section5" class="content-section dark-background section-type-1">
         <div class="section-text">
             <h2>Latvijas Universitāte</h2>
-            <p>Sed ut velit non nulla pharetra fringilla a at orci. In in est nec erat suscipit vulputate. Sed tempus elit urna, eu cursus neque tincidunt a. Proin sed tincidunt lorem. Proin eget tempus lacus. Quisque viverra sit amet augue sed egestas. Vivamus tristique nibh in orci porttitor ullamcorper. Vestibulum congue vestibulum volutpat. Nunc tincidunt blandit metus, eget gravida orci consequat vel. Integer ac laoreet lacus. Morbi eu interdum diam.</p>
-            <button class="prev" onclick="scrollToSection('section4')">Iepriekšējais</button>
+            <p>
+                Latvijas Universitāte ir vieta, kas ir pilna ar zināšanām un izaugsmi. Pēdējos trīs gadus es ar prieku eju studēt šajā skaistajā ēkā. Katru reizi, kad es iznāku ārā no šīs ēkas, es jūtu, ka esmu ieguvis jaunas zināšanas, satikis jaunus cilvēkus un esmu pilns ar vēlmi turpināt savu izaugsmi.
+            </p>
+            <p>
+            Es ļoti uzslavēju to, cik skaista šī ēka ir gan no ārpuses, gan no iekšpuses. Zinot, cik ilgus gadus tā jau šeit stāv, es varu ieraudzīt, cik lielas rūpes ir par šo dāvanu. Man patīk tas, ka vienmēr ir iespēja ar kādu labi parunāties un būt ap pretimnākošiem cilvēkiem apkārt.
+            </p>
+            <p>
+            Lai gan iekšā logi jau sāk kļūt veci un ziemā telpās nāk iekšā liels aukstums, tas man vēl vairāk palīdz paturēt Latvijas Universitāti man atmiņā. Es atceros, kā es sēdēju telpās, mācoties un strādājot, un kā es jutu, ka esmu daļa no kaut kā lielāka.
+            </p>
+            <p>
+            Universitāte ir novietota blakus parkam, un kad man ir brīvs laiks un vēlos paelpot svaigu gaisu, es labprāt izeju ārā pasēdēt parkā. Es apbrīnoju to, cik skaista ir Latvija, un es jūtu pateicību par to, ka esmu šeit.
+            </p>
+            <button class="prev" onclick="scrollToSection('section4')">Iepriekšējā pietura</button>
         </div>
-		<div class="section-image">
-			<img src="latvijas-universitate.jpg" alt="Sekcijas attēls" class="section-image full-width-image">
-			<p class="signature">Ezers no paša rīta mostās ļoti skaitsi</p>
-		</div>
+        <div class="section-image">
+            <img src="latvijas-universitate.jpg" alt="Latvijas Universitāte ikdienas skaistumā" class="section-image full-width-image">
+            <p class="signature">Vienmēr patīkami doties uz uniersitāti</p>
+        </div>
     </section>
 
     <footer>
         <div class="footer-column">
-            <h3>Navigācija</h3>
+            <h4>Navigācija</h4>
             <ul>
                 <li><a href="#home">Sākums</a></li>
                 <li><a href="#section1">Juglas ezers</a></li>
@@ -121,7 +195,7 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Socialie tīkli</h3>
+            <h4>Socialie tīkli</h4>
             <ul>
                 <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 <li><a href="https://www.instagram.com">Instagram</a></li>
@@ -130,7 +204,7 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h3>Kontakti</h3>
+            <h4>Kontakti</h4>
             <p>Autors: Artūrs Ābele<br>
                St. apl. nr: aa21210<br>
                Epasts: arturs.abele@gmail.com<br>

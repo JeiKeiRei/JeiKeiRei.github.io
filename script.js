@@ -11,17 +11,34 @@ document.getElementById('start').addEventListener('click', function() {
 });
 
 function scrollToSection(sectionId) {
-    document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+    var section = document.getElementById(sectionId);
+    var sectionPosition = section.getBoundingClientRect().top + window.scrollY;
+    var middlePosition = sectionPosition + (section.offsetHeight / 2) - (window.innerHeight / 2);
+    window.scrollTo({
+        top: middlePosition,
+        behavior: 'smooth'
+    });
 }
 
 function toggleMenu() {
-    var sidePanel = document.getElementById('sidePanel');
-    if (sidePanel.style.display === 'block') {
-        sidePanel.style.display = 'none';
-    } else {
-        sidePanel.style.display = 'block';
-    }
+        var sidePanel = document.getElementById('sidePanel');
+        sidePanel.classList.toggle('open');
+        if (sidePanel.classList.contains('open')){
+            document.getElementById('menu-icon').src = 'x-ikona.png';
+        } else document.getElementById('menu-icon').src = 'hamburger-ikona.png';
 }
+
+document.addEventListener('click', function(event) {
+    var sidePanel = document.getElementById('sidePanel');
+    var menuIcon = document.getElementById('menu-icon');
+
+    if (!sidePanel.contains(event.target) && !menuIcon.contains(event.target)) {
+        if (sidePanel.classList.contains('open')) {
+            sidePanel.classList.remove('open');
+            menuIcon.src = 'hamburger-ikona.png';
+        }
+    }
+});
 
 function setDarkMode() {
     document.body.classList.add('dark-mode');
@@ -29,6 +46,7 @@ function setDarkMode() {
     document.getElementById('light-mode').disabled = false;
     document.getElementById('dark-mode-side').disabled = true;
     document.getElementById('light-mode-side').disabled = false;
+    document.getElementById('logo').src = 'aa_logo_tr_2_white.png';
 }
 
 function setLightMode() {
@@ -37,4 +55,7 @@ function setLightMode() {
     document.getElementById('light-mode').disabled = true;
     document.getElementById('dark-mode-side').disabled = false;
     document.getElementById('light-mode-side').disabled = true;
+    document.getElementById('logo').src = 'aa_logo_tr_2.png';
 }
+
+

@@ -68,8 +68,49 @@ nav ul li a {
     color: #333;
 }
 
+nav ul li a:hover {
+    color: #A4A938;
+}
+/* when the button is not disabled */
+
 .mode-toggle button {
     margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 10px;
+}
+
+.mode-toggle button:disabled {
+    cursor: default;
+}
+
+.mode-toggle #dark-mode {
+    background-color: #9974AA;
+}
+
+.mode-toggle #light-mode {
+    background-color: #A4A938;
+}
+
+.mode-toggle #dark-mode:not([disabled]):hover {
+    color:#FAFDA9;
+    background-color: #280339;
+}
+
+.mode-toggle #light-mode:not([disabled]):hover {
+    color:#FAFDA9;
+    background-color: #515400;
+}
+
+#dark-mode:not([disabled]):hover, #light-mode:not([disabled]):hover {
+    /*background-color: #555;*/
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24),0 7px 10px 0 rgba(0,0,0,0.19);
+}
+
+#menu-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .hamburger {
@@ -78,13 +119,13 @@ nav ul li a {
     border: none;
     font-size: 24px;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .side-panel {
-    display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: -300px; /* Start off-screen */
     width: 250px;
     height: 100%;
     background-color: #333;
@@ -92,6 +133,10 @@ nav ul li a {
     padding: 20px;
     z-index: 1000;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+    transition: left 0.3s ease;
+}
+.side-panel.open {
+    left: 0; /* Slide in */
 }
 
 .side-panel ul {
@@ -112,26 +157,36 @@ nav ul li a {
     cursor: pointer;
 }
 
+.side-panel ul li a:hover {
+    color: #A4A938;
+}
 
 .hero-content {
+    text-align: left;
     background: rgba(255, 255, 255, 0.9);
     display: inline-block;
     padding: 20px;
     border-radius: 5px;
 }
 
+.hero-content p {
+    text-align: left;
+}
+
 .content-section {
     background-color: #e3e3e3;
-    padding: 60px 20px;
+    padding: 60px 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .content-section img {
     width: 100%;
     max-width: 400px;
     height: auto;
+    border-radius: 8px;
 }
 
 .content-section.dark-background {
@@ -156,14 +211,70 @@ nav ul li a {
 }
 .section-image {
     flex: 1;
-    max-width: 400px;
+    max-width: 100%;
 }
-.section4 .section-text {
+
+/* Specific styles for each section type */
+.section-type-1 .section-image {
+    order: 1;
+    max-width: 90%; /* Slightly bigger */
+}
+
+.section-type-1 .section-text {
+    order: 2;
+}
+
+.section-type-2 .section-image {
+    order: 2;
+    max-width: 70%; /* Slightly smaller */
+}
+
+.section-type-2 .section-text {
     order: 1;
 }
 
-.section4 .section-image {
+.section-type-3 .section-image {
+    order: 1;
+    max-width: 80%; /* Slightly smaller */
+}
+
+.section-type-3 .section-text {
     order: 2;
+}
+
+.section-type-4 {
+    flex-direction: column;
+    text-align: center;
+}
+
+.section-type-4 .section-image {
+    order: 2;
+    max-width: 100%;
+    /*margin: 20px auto;*/
+}
+
+.section-type-4 .section-text {
+    order: 1;
+}
+
+.section-type-4 .section-nav {
+    order: 3;
+    /*margin-top: 20px;*/
+}
+/*.section4 .section-text {*/
+/*    order: 1;*/
+/*}*/
+
+/*.section4 .section-image {*/
+/*    order: 2;*/
+/*}*/
+
+.next {
+    background-color: #9974AA;
+}
+
+.prev {
+    background-color: #A4A938;
 }
 
 .next, .prev {
@@ -173,14 +284,24 @@ nav ul li a {
     border: none;
 	border-radius: 8px;
 	height: 40px;
-    background-color: #333;
+    /*background-color: #333;*/
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+.next:hover {
+    color:#FAFDA9;
+    background-color: #280339;
+}
+
+.prev:hover {
+    color:#FAFDA9;
+    background-color: #515400;
+}
+
 .next:hover, .prev:hover {
-    background-color: #555;
+    /*background-color: #555;*/
 	box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24),0 7px 10px 0 rgba(0,0,0,0.19);
 }
 
@@ -196,7 +317,7 @@ nav ul li a {
 
 footer {
     background-color: #f0f0f0;
-    padding: 20px 40px;
+    padding: 20px 40px 10px;
     text-align: left;
 }
 
@@ -206,7 +327,8 @@ footer {
     margin-right: 1%;
 }
 
-.footer-column h3 {
+.footer-column h4 {
+    color: #280339;
     margin-top: 0;
 }
 
@@ -222,6 +344,10 @@ footer {
 .footer-column ul li a {
     text-decoration: none;
     color: #333;
+}
+
+.footer-column ul li a:hover {
+    color: #A4A938;
 }
 
 .footer-bottom {
@@ -243,6 +369,14 @@ body.dark-mode nav ul li a {
     color: white;
 }
 
+body.dark-mode nav ul li a:hover {
+    color: #9974AA;
+}
+
+body.dark-mode .side-panel ul li a:hover {
+    color: #9974AA;
+}
+
 body.dark-mode .hero-content {
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -255,6 +389,14 @@ body.dark-mode .content-section.dark-background {
     background-color: #666;
 }
 
+body.dark-mode .next {
+    background-color: #5B2971;
+}
+
+body.dark-mode .prev {
+    background-color: #7B7F15;
+}
+
 body.dark-mode .signature {
     color: #ccc;
 }
@@ -263,8 +405,16 @@ body.dark-mode footer {
     background-color: #555;
 }
 
+body.dark-mode .footer-column h4 {
+    color: #FAFDA9;
+}
+
 body.dark-mode .footer-column ul li a {
     color: white;
+}
+
+body.dark-mode .footer-column ul li a:hover {
+    color: #9974AA;
 }
 
 body.dark-mode .footer-bottom {
@@ -331,9 +481,9 @@ body.dark-mode .footer-bottom {
     .hamburger {
         display: block;
     }
-    .side-panel {
-        display: none;
-    }
+    /*.side-panel {*/
+    /*    display: none;*/
+    /*}*/
     .content-section {
         text-align: center; /* Center content on smaller screens */
     }
@@ -408,9 +558,9 @@ body.dark-mode .footer-bottom {
     .hamburger {
         display: block;
     }
-    .side-panel {
-        display: none;
-    }
+    /*.side-panel {*/
+    /*    display: none;*/
+    /*}*/
     .content-section {
         text-align: center; /* Center content on smaller screens */
     }
@@ -447,5 +597,19 @@ body.dark-mode .footer-bottom {
         height: fit-content;
         width: 100%;
         background: rgba(255,255,255, 0.9);
+    }
+    .content-section img {
+        transition: transform .2s, box-shadow 0.3s;
+        align-self: center;
+    }
+    .content-section img:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+    }
+    .section-type-4 .section-image img {
+        width: 1000px;
+        height: auto;
+        max-height: 300px; /* Adjust this value as needed */
+        object-fit: cover;
     }
 }

@@ -489,6 +489,7 @@ body.dark-mode .footer-bottom {
         text-align: center; /* Center content on smaller screens */
     }
     .content-section img {
+        transition: transform .2s, box-shadow 0.3s;
         margin-bottom: 20px; /* Add margin below images */
     }
 	footer {
@@ -566,7 +567,11 @@ body.dark-mode .footer-bottom {
         text-align: center; /* Center content on smaller screens */
     }
     .content-section img {
+        transition: transform .2s, box-shadow 0.3s;
         margin-bottom: 20px; /* Add margin below images */
+        height: 500px;
+        border-radius: 8px;
+        object-fit: cover;
     }
 	footer {
 		margin-right: -20px;
@@ -602,6 +607,9 @@ body.dark-mode .footer-bottom {
     .content-section img {
         transition: transform .2s, box-shadow 0.3s;
         align-self: center;
+        height: 500px;
+        border-radius: 8px;
+        object-fit: cover;
     }
     .content-section img:hover {
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

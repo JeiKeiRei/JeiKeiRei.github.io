@@ -499,7 +499,7 @@ body.dark-mode .footer-bottom {
         margin-bottom: 20px;
     }
     footer {
-	margin-right: -20px;
+	/* margin-right: -20px; */
     }
     .footer-column {
         float: none;

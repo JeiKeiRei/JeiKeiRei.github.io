@@ -580,7 +580,7 @@ body.dark-mode .footer-bottom {
         object-fit: cover;
     }
 	footer {
-		margin-right: -20px;
+		/*margin-right: -20px;*/
 	}
     .footer-column {
         float: none;
